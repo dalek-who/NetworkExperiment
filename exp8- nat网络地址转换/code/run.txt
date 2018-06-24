@@ -1,0 +1,7 @@
+在n1中运行nat，进行数据包的处理
+在h2上运行HTTP服务
+执行脚本(disable_offloading.sh)，防止协议栈生成错误的checksum
+执行python -m SimpleHTTPServer， 启动HTTP服务
+在h1上访问h2的HTTP服务
+执行脚本(disable_offloading.sh)
+h1 # wget http://159.226.39.123:8000

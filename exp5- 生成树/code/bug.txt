@@ -1,0 +1,25 @@
+gcc -c -g -Wall -Iinclude stp.c -o stp.o
+stp.c: In function ‘config_cmp_port_stp’:
+stp.c:203:2: error: expected ‘,’ or ‘;’ before ‘u16’
+  u16 stp_port_id = get_port_id(p1->port_id)
+  ^
+stp.c:210:5: error: ‘p1_root’ undeclared (first use in this function)
+  if(p1_root != stp_root_id)
+     ^
+stp.c:210:5: note: each undeclared identifier is reported only once for each function it appears in
+stp.c:216:21: error: ‘stp_port_id’ undeclared (first use in this function)
+  else if(p1_port != stp_port_id)
+                     ^
+stp.c: In function ‘stp_update’:
+stp.c:271:4: error: expected ‘;’ before ‘p’
+    p->designated_cost = stp->root_path_cost 
+    ^
+stp.c:234:14: warning: unused variable ‘max_port’ [-Wunused-variable]
+  stp_port_t *max_port = &stp->ports[0];
+              ^
+stp.c: In function ‘config_cmp_port_stp’:
+stp.c:220:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Makefile:18: recipe for target 'stp.o' failed
+make: *** [stp.o] Error 1

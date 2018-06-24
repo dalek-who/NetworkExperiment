@@ -1,0 +1,11 @@
+INFO: find the following interfaces: b6-eth2 b6-eth0 b6-eth1 b6-eth3.
+DEBUG: received SIGTERM, terminate this program.
+INFO: non-root switch, desinated root: 0101, root path cost: 1.
+INFO: port id: 01, role: DESIGNATED.
+INFO: 	designated ->root: 0101, ->switch: 0603, ->port: 01, ->cost: 1.
+INFO: port id: 02, role: ALTERNATE.
+INFO: 	designated ->root: 0101, ->switch: 0503, ->port: 04, ->cost: 1.
+INFO: port id: 03, role: ROOT.
+INFO: 	designated ->root: 0101, ->switch: 0101, ->port: 04, ->cost: 0.
+INFO: port id: 04, role: ALTERNATE.
+INFO: 	designated ->root: 0101, ->switch: 0201, ->port: 04, ->cost: 1.

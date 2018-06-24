@@ -1,0 +1,16 @@
+break arpcache_lookup
+break arpcache_insert
+break arpcache_sweep
+break arpcache_append_packet
+break arp_send_reply
+break arp_send_request
+break handle_arp_packet
+break handle_ip_packet
+break send_arp
+break /home/wang/networking/exp-6_route/08-router/arpcache.c:203
+break iface_send_packet_by_arp
+break /home/wang/networking/exp-6_route/08-router/ip.c:65
+break /home/wang/networking/exp-6_route/08-router/arpcache.c:219
+break /home/wang/networking/exp-6_route/08-router/arpcache.c:222
+break /home/wang/networking/exp-6_route/08-router/arpcache.c:212
+break /home/wang/networking/exp-6_route/08-router/icmp.c:69

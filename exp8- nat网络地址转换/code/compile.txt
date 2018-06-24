@@ -1,0 +1,36 @@
+gcc -c -g -Wall -Iinclude nat.c -o nat.o
+nat.c: In function ‘do_translation’:
+nat.c:118:20: warning: passing argument 1 of ‘list_add_tail’ from incompatible pointer type [-Wincompatible-pointer-types]
+      list_add_tail(new_mapping, mapping_entry);
+                    ^
+In file included from include/base.h:6:0,
+                 from include/nat.h:5,
+                 from nat.c:1:
+include/list.h:55:20: note: expected ‘struct list_head *’ but argument is of type ‘struct nat_mapping *’
+ static inline void list_add_tail(struct list_head *new, struct list_head *head)
+                    ^
+nat.c:118:33: warning: passing argument 2 of ‘list_add_tail’ from incompatible pointer type [-Wincompatible-pointer-types]
+      list_add_tail(new_mapping, mapping_entry);
+                                 ^
+In file included from include/base.h:6:0,
+                 from include/nat.h:5,
+                 from nat.c:1:
+include/list.h:55:20: note: expected ‘struct list_head *’ but argument is of type ‘struct nat_mapping *’
+ static inline void list_add_tail(struct list_head *new, struct list_head *head)
+                    ^
+nat.c: In function ‘nat_timeout’:
+nat.c:238:24: warning: passing argument 1 of ‘list_delete_entry’ from incompatible pointer type [-Wincompatible-pointer-types]
+      list_delete_entry(mapping_entry);
+                        ^
+In file included from include/base.h:6:0,
+                 from include/nat.h:5,
+                 from nat.c:1:
+include/list.h:62:20: note: expected ‘struct list_head *’ but argument is of type ‘struct nat_mapping *’
+ static inline void list_delete_entry(struct list_head *entry)
+                    ^
+nat.c: In function ‘assign_external_port’:
+nat.c:65:15: warning: ‘i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   port = (port+i)%65536;
+               ^
+gcc -L. main.o nat.o -o nat -lipstack -lpthread 
+wang@ubuntu:~/networking/exp-8_nat$ 

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "packet.h": "c",
+        "types.h": "c",
+        "mac.h": "c"
+    }
+}

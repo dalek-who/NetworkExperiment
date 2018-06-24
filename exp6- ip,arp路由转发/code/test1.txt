@@ -1,0 +1,72 @@
+test1.txt
+
+
+
+
+#################### h1 ping 10.0.2.22 ####################
+PING 10.0.2.22 (10.0.2.22) 56(84) bytes of data.
+64 bytes from 10.0.2.22: icmp_seq=1 ttl=63 time=173 ms
+64 bytes from 10.0.2.22: icmp_seq=2 ttl=63 time=0.515 ms
+64 bytes from 10.0.2.22: icmp_seq=3 ttl=63 time=0.472 ms
+64 bytes from 10.0.2.22: icmp_seq=4 ttl=63 time=0.478 ms
+64 bytes from 10.0.2.22: icmp_seq=5 ttl=63 time=0.478 ms
+
+--- 10.0.2.22 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4068ms
+rtt min/avg/max/mdev = 0.472/35.039/173.256/69.108 ms
+
+
+
+#################### h1 ping 10.0.3.33 ####################
+PING 10.0.3.33 (10.0.3.33) 56(84) bytes of data.
+64 bytes from 10.0.3.33: icmp_seq=1 ttl=63 time=1.59 ms
+64 bytes from 10.0.3.33: icmp_seq=2 ttl=63 time=0.284 ms
+64 bytes from 10.0.3.33: icmp_seq=3 ttl=63 time=0.528 ms
+64 bytes from 10.0.3.33: icmp_seq=4 ttl=63 time=0.524 ms
+64 bytes from 10.0.3.33: icmp_seq=5 ttl=63 time=0.531 ms
+
+--- 10.0.3.33 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4051ms
+rtt min/avg/max/mdev = 0.284/0.692/1.595/0.461 ms
+
+
+
+#################### h1 ping 10.0.1.1 ####################
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=1.92 ms
+64 bytes from 10.0.1.1: icmp_seq=2 ttl=64 time=0.369 ms
+64 bytes from 10.0.1.1: icmp_seq=3 ttl=64 time=0.339 ms
+64 bytes from 10.0.1.1: icmp_seq=4 ttl=64 time=1.72 ms
+64 bytes from 10.0.1.1: icmp_seq=5 ttl=64 time=0.368 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4032ms
+rtt min/avg/max/mdev = 0.339/0.944/1.920/0.719 ms
+
+
+
+#################### h1 ping 10.0.4.1 ####################
+PING 10.0.4.1 (10.0.4.1) 56(84) bytes of data.
+From 10.0.1.1 icmp_seq=1 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=2 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=3 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=4 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=5 Destination Net Unreachable
+
+--- 10.0.4.1 ping statistics ---
+5 packets transmitted, 0 received, +5 errors, 100% packet loss, time 4066ms
+
+
+
+
+#################### h1 ping 10.0.2.5 ####################
+PING 10.0.2.5 (10.0.2.5) 56(84) bytes of data.
+From 10.0.1.1 icmp_seq=1 Destination Host Unreachable
+From 10.0.1.1 icmp_seq=2 Destination Host Unreachable
+From 10.0.1.1 icmp_seq=3 Destination Host Unreachable
+From 10.0.1.1 icmp_seq=4 Destination Host Unreachable
+From 10.0.1.1 icmp_seq=5 Destination Host Unreachable
+
+--- 10.0.2.5 ping statistics ---
+5 packets transmitted, 0 received, +5 errors, 100% packet loss, time 4047ms
+pipe 3

@@ -1,0 +1,25 @@
+mospf_daemon.c:11:20: warning: extra tokens at end of #include directive
+ #include "rtable.h"c
+                    ^
+mospf_daemon.c: In function ‘sending_mospf_hello_thread’:
+mospf_daemon.c:162:4: warning: implicit declaration of function ‘iface_send_packet’ [-Wimplicit-function-declaration]
+    iface_send_packet(iface, packet, pkt_len); //there is free() inside iface_se
+    ^
+mospf_daemon.c: In function ‘handle_mospf_hello’:
+mospf_daemon.c:268:29: warning: passing argument 1 of ‘packet_analize’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  hdr_t hdr = packet_analize(packet, MOSPF_TYPE_HELLO);
+                             ^
+mospf_daemon.c:62:7: note: expected ‘char *’ but argument is of type ‘const char *’
+ hdr_t packet_analize(char *packet,int type){
+       ^
+mospf_daemon.c: In function ‘find_node_nearest’:
+mospf_daemon.c:359:5: error: ‘node’ undeclared (first use in this function)
+     node = &nodes[i];
+     ^
+mospf_daemon.c:359:5: note: each undeclared identifier is reported only once for each function it appears in
+mospf_daemon.c: In function ‘router_exist’:
+mospf_daemon.c:371:26: warning: suggest parentheses around comparison in operand of ‘&’ [-Wparentheses]
+   if(rt->dest & rt->mask == subnet & mask){
+                          ^
+Makefile:21: recipe for target 'mospf_daemon.o' failed
+make: *** [mospf_daemon.o] Error 1

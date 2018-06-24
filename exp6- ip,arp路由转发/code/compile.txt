@@ -1,0 +1,28 @@
+gcc -c -g -Wall -Iinclude icmp.c -o icmp.o
+icmp.c: In function ‘icmp_send_packet’:
+icmp.c:52:2: warning: implicit declaration of function ‘memset’ [-Wimplicit-function-declaration]
+  memset(out_pkt, 0, sizeof(out_pkt) );
+  ^
+icmp.c:52:2: warning: incompatible implicit declaration of built-in function ‘memset’
+icmp.c:52:2: note: include ‘<string.h>’ or provide a declaration of ‘memset’
+icmp.c:52:27: warning: argument to ‘sizeof’ in ‘memset’ call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  memset(out_pkt, 0, sizeof(out_pkt) );
+                           ^
+icmp.c:70:4: warning: implicit declaration of function ‘memcpy’ [-Wimplicit-function-declaration]
+    memcpy(rest_of_out_icmp_hdr + 4 , in_iphdr , IP_HDR_SIZE(in_iphdr) ); //IP_BASE_HDR_SIZE 4
+    ^
+icmp.c:70:4: warning: incompatible implicit declaration of built-in function ‘memcpy’
+icmp.c:70:4: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+icmp.c:78:40: error: ‘in_icpm_hdr’ undeclared (first use in this function)
+    char* rest_of_in_icmp_hdr = (char*)(in_icpm_hdr + sizeof(in_icpm_hdr->type) + sizeof(in_icpm_hdr->code)+ sizeof(in_icpm_
+                                        ^
+icmp.c:78:40: note: each undeclared identifier is reported only once for each function it appears in
+icmp.c:80:4: warning: incompatible implicit declaration of built-in function ‘memcpy’
+    memcpy(rest_of_out_icmp_hdr , rest_of_in_icmp_hdr , cpy_len);
+    ^
+icmp.c:80:4: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+icmp.c:77:20: warning: unused variable ‘in_icmp_hdr’ [-Wunused-variable]
+    struct icmphdr* in_icmp_hdr = (struct icmphdr *)(in_pkt + ETHER_HDR_SIZE + IP_BASE_HDR_SIZE);
+                    ^
+Makefile:19: recipe for target 'icmp.o' failed
+make: *** [icmp.o] Error 1

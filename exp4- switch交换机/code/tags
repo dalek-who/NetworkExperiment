@@ -1,0 +1,114 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DEBUG	include/log.h	/^enum log_level { DEBUG = 0, INFO, WARNING, ERROR };$/;"	e	enum:log_level
+DEFAULT_TTL	include/types.h	6;"	d
+DYNAMIC_ROUTING	include/base.h	10;"	d
+ERROR	include/log.h	/^enum log_level { DEBUG = 0, INFO, WARNING, ERROR };$/;"	e	enum:log_level
+ETHER_FMT	include/ether.h	22;"	d
+ETHER_HDR_SIZE	include/ether.h	19;"	d
+ETHER_STRING	include/ether.h	21;"	d
+ETH_ALEN	include/ether.h	6;"	d
+ETH_FRAME_LEN	include/ether.h	7;"	d
+ETH_P_ALL	include/ether.h	9;"	d
+ETH_P_ARP	include/ether.h	11;"	d
+ETH_P_IP	include/ether.h	10;"	d
+HASH_16BITS	include/hash.h	7;"	d
+HASH_8BITS	include/hash.h	6;"	d
+INFO	include/log.h	/^enum log_level { DEBUG = 0, INFO, WARNING, ERROR };$/;"	e	enum:log_level
+MAC_PORT_TIMEOUT	include/mac.h	8;"	d
+WARNING	include/log.h	/^enum log_level { DEBUG = 0, INFO, WARNING, ERROR };$/;"	e	enum:log_level
+__BASE_H__	include/base.h	2;"	d
+__ETHER_H__	include/ether.h	2;"	d
+__HASH_H__	include/hash.h	2;"	d
+__LIST_H__	include/list.h	2;"	d
+__LOG_H__	include/log.h	2;"	d
+__MAC_H__	include/mac.h	2;"	d
+__PACKET_H__	include/packet.h	2;"	d
+__TYPES_H__	include/types.h	2;"	d
+__UTILS_H__	include/utils.h	2;"	d
+area_id	include/base.h	/^	u32 area_id;	$/;"	m	struct:__anon1
+attr	include/mac.h	/^	pthread_mutexattr_t attr;$/;"	m	struct:__anon3
+broadcast_packet	packet.c	/^void broadcast_packet(iface_info_t *iface, const char *packet, int len)$/;"	f
+delete_list	include/list.h	62;"	d
+destory_mac_hash_table	mac.c	/^void destory_mac_hash_table()$/;"	f
+dump_mac_port_table	mac.c	/^void dump_mac_port_table()$/;"	f
+ether_dhost	include/ether.h	/^	u8 ether_dhost[ETH_ALEN];$/;"	m	struct:ether_header
+ether_header	include/ether.h	/^struct ether_header {$/;"	s
+ether_shost	include/ether.h	/^	u8 ether_shost[ETH_ALEN];$/;"	m	struct:ether_header
+ether_type	include/ether.h	/^	u16 ether_type;$/;"	m	struct:ether_header
+fd	include/base.h	/^	int fd;$/;"	m	struct:__anon2
+fd_to_iface	main.c	/^static iface_info_t *fd_to_iface(int fd)$/;"	f	file:
+fds	include/base.h	/^	struct pollfd *fds;$/;"	m	struct:__anon1	typeref:struct:__anon1::pollfd
+find_available_ifaces	main.c	/^static void find_available_ifaces()$/;"	f	file:
+handle_packet	main.c	/^void handle_packet(iface_info_t *iface, char *packet, int len)$/;"	f
+hash16	hash.c	/^u16 hash16(unsigned char *addr, int len)$/;"	f
+hash8	hash.c	/^u8 hash8(unsigned char *addr, int len)$/;"	f
+hash_table	include/mac.h	/^	mac_port_entry_t *hash_table[HASH_8BITS];$/;"	m	struct:__anon3
+helloint	include/base.h	/^	int helloint;$/;"	m	struct:__anon2
+iface	include/mac.h	/^	iface_info_t *iface;$/;"	m	struct:mac_port_entry
+iface_info_t	include/base.h	/^} iface_info_t;$/;"	t	typeref:struct:__anon2
+iface_list	include/base.h	/^	struct list_head iface_list;$/;"	m	struct:__anon1	typeref:struct:__anon1::list_head
+iface_send_packet	packet.c	/^void iface_send_packet(iface_info_t *iface, const char *packet, int len)$/;"	f
+index	include/base.h	/^	int index;$/;"	m	struct:__anon2
+init_all_ifaces	main.c	/^void init_all_ifaces()$/;"	f
+init_list_head	include/list.h	/^static inline void init_list_head(struct list_head *list)$/;"	f
+init_mac_hash_table	mac.c	/^void init_mac_hash_table()$/;"	f
+init_ustack	main.c	/^void init_ustack()$/;"	f
+insert_mac_port	mac.c	/^void insert_mac_port(u8 mac[ETH_ALEN], iface_info_t *iface)$/;"	f
+instance	main.c	/^ustack_t *instance;$/;"	v
+ip	include/base.h	/^	u32 ip;$/;"	m	struct:__anon2
+ip_str	include/base.h	/^	char ip_str[16];$/;"	m	struct:__anon2
+list	include/base.h	/^	struct list_head list;$/;"	m	struct:__anon2	typeref:struct:__anon2::list_head
+list_add_tail	include/list.h	/^static inline void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f
+list_delete_entry	include/list.h	/^static inline void list_delete_entry(struct list_head *entry)$/;"	f
+list_empty	include/list.h	10;"	d
+list_entry	include/list.h	12;"	d
+list_for_each	include/list.h	15;"	d
+list_for_each_entry	include/list.h	18;"	d
+list_for_each_entry_safe	include/list.h	27;"	d
+list_for_each_prev	include/list.h	33;"	d
+list_for_each_safe	include/list.h	23;"	d
+list_head	include/list.h	/^struct list_head {$/;"	s
+list_insert	include/list.h	/^static inline void list_insert(struct list_head *new,$/;"	f
+lock	include/mac.h	/^	pthread_mutex_t lock;$/;"	m	struct:__anon3
+log	include/log.h	25;"	d
+log_it	include/log.h	17;"	d
+log_it	include/log.h	21;"	d
+log_level	include/log.h	/^enum log_level { DEBUG = 0, INFO, WARNING, ERROR };$/;"	g
+log_level_str	include/log.h	/^static const char *log_level_str[] = { "DEBUG", "INFO", "WARNING", "ERROR" };$/;"	v
+lookup_port	mac.c	/^iface_info_t *lookup_port(u8 mac[ETH_ALEN])$/;"	f
+lsuint	include/base.h	/^	int lsuint;$/;"	m	struct:__anon1
+mac	include/base.h	/^	u8	mac[ETH_ALEN];$/;"	m	struct:__anon2
+mac	include/mac.h	/^	uint8_t mac[ETH_ALEN];$/;"	m	struct:mac_port_entry
+mac_port_entry	include/mac.h	/^struct mac_port_entry {$/;"	s
+mac_port_entry_t	include/mac.h	/^typedef struct mac_port_entry mac_port_entry_t;$/;"	t	typeref:struct:mac_port_entry
+mac_port_map	mac.c	/^mac_port_map_t mac_port_map;$/;"	v
+mac_port_map_t	include/mac.h	/^} mac_port_map_t;$/;"	t	typeref:struct:__anon3
+main	main.c	/^int main(int argc, const char **argv)$/;"	f
+mask	include/base.h	/^	u32 mask;$/;"	m	struct:__anon2
+name	include/base.h	/^	char name[16];$/;"	m	struct:__anon2
+nbr_list	include/base.h	/^	struct list_head nbr_list;$/;"	m	struct:__anon2	typeref:struct:__anon2::list_head
+next	include/list.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+next	include/mac.h	/^	struct mac_port_entry *next;$/;"	m	struct:mac_port_entry	typeref:struct:mac_port_entry::mac_port_entry
+nifs	include/base.h	/^	int nifs;$/;"	m	struct:__anon1
+num_nbr	include/base.h	/^	int num_nbr;$/;"	m	struct:__anon2
+open_device	main.c	/^int open_device(const char *dname)$/;"	f
+prev	include/list.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::
+read_iface_info	main.c	/^int read_iface_info(iface_info_t *iface)$/;"	f
+router_id	include/base.h	/^	u32 router_id;$/;"	m	struct:__anon1
+sequence_num	include/base.h	/^	u16 sequence_num;$/;"	m	struct:__anon1
+sweep_aged_mac_port_entry	mac.c	/^void sweep_aged_mac_port_entry()$/;"	f
+sweeping_mac_port_thread	mac.c	/^void *sweeping_mac_port_thread(void *nil)$/;"	f
+this_log_level	include/log.h	/^static enum log_level this_log_level = DEBUG;$/;"	v	typeref:enum:log_level
+tid	include/mac.h	/^	pthread_t tid;$/;"	m	struct:__anon3
+u16	include/types.h	/^typedef uint16_t u16;$/;"	t
+u32	include/types.h	/^typedef uint32_t u32;$/;"	t
+u64	include/types.h	/^typedef uint64_t u64;$/;"	t
+u8	include/types.h	/^typedef uint8_t u8;$/;"	t
+ustack_run	main.c	/^void ustack_run()$/;"	f
+ustack_t	include/base.h	/^} ustack_t;$/;"	t	typeref:struct:__anon1
+visited	include/mac.h	/^	time_t visited;$/;"	m	struct:mac_port_entry

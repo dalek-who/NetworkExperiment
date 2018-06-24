@@ -1,0 +1,31 @@
+wang@ubuntu:~/networking/exp-9_mospf-1$ make
+gcc -c -g -Wall -Iinclude arp.c -o arp.o
+gcc -c -g -Wall -Iinclude arpcache.c -o arpcache.o
+gcc -c -g -Wall -Iinclude icmp.c -o icmp.o
+gcc -c -g -Wall -Iinclude ip.c -o ip.o
+gcc -c -g -Wall -Iinclude main.c -o main.o
+gcc -c -g -Wall -Iinclude mospf_database.c -o mospf_database.o
+gcc -c -g -Wall -Iinclude mospf_daemon.c -o mospf_daemon.o
+mospf_daemon.c: In function ‘sending_mospf_hello_thread’:
+mospf_daemon.c:117:4: warning: implicit declaration of function ‘iface_send_packet’ [-Wimplicit-function-declaration]
+    iface_send_packet(iface, packet, pkt_len); //there is free() inside iface_se
+    ^
+mospf_daemon.c: In function ‘handle_mospf_hello’:
+mospf_daemon.c:212:29: warning: passing argument 1 of ‘packet_analize’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  hdr_t hdr = packet_analize(packet, MOSPF_TYPE_HELLO);
+                             ^
+mospf_daemon.c:61:7: note: expected ‘char *’ but argument is of type ‘const char *’
+ hdr_t packet_analize(char *packet,int type){
+       ^
+mospf_daemon.c:239:7: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  free(packet);
+       ^
+In file included from mospf_daemon.c:12:0:
+/usr/include/stdlib.h:483:13: note: expected ‘void *’ but argument is of type ‘const char *’
+ extern void free (void *__ptr) __THROW;
+             ^
+gcc -c -g -Wall -Iinclude mospf_proto.c -o mospf_proto.o
+gcc -c -g -Wall -Iinclude packet.c -o packet.o
+gcc -c -g -Wall -Iinclude rtable.c -o rtable.o
+gcc -c -g -Wall -Iinclude rtable_internal.c -o rtable_internal.o
+gcc  arp.o arpcache.o icmp.o ip.o main.o mospf_database.o mospf_daemon.o mospf_proto.o packet.o rtable.o rtable_internal.o -o mospfd -lpthread 
