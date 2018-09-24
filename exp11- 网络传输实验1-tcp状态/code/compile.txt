@@ -1,0 +1,21 @@
+wang@ubuntu:~/networking/exp-11_tcp-1$ make
+gcc -c -g -Wall -Iinclude arp.c -o arp.o
+gcc -c -g -Wall -Iinclude arpcache.c -o arpcache.o
+gcc -c -g -Wall -Iinclude icmp.c -o icmp.o
+gcc -c -g -Wall -Iinclude ip.c -o ip.o
+gcc -c -g -Wall -Iinclude main.c -o main.o
+gcc -c -g -Wall -Iinclude packet.c -o packet.o
+gcc -c -g -Wall -Iinclude rtable.c -o rtable.o
+gcc -c -g -Wall -Iinclude rtable_internal.c -o rtable_internal.o
+gcc -c -g -Wall -Iinclude tcp.c -o tcp.o
+gcc -c -g -Wall -Iinclude tcp_apps.c -o tcp_apps.o
+gcc -c -g -Wall -Iinclude tcp_in.c -o tcp_in.o
+gcc -c -g -Wall -Iinclude tcp_out.c -o tcp_out.o
+gcc -c -g -Wall -Iinclude tcp_sock.c -o tcp_sock.o
+gcc -c -g -Wall -Iinclude tcp_timer.c -o tcp_timer.o
+gcc  arp.o arpcache.o icmp.o ip.o main.o packet.o rtable.o rtable_internal.o tcp.o tcp_apps.o tcp_in.o tcp_out.o tcp_sock.o tcp_timer.o -o tcp_stack -lpthread 
+tcp_sock.o: In function `tcp_sock_accept':
+/home/wang/networking/exp-11_tcp-1/tcp_sock.c:371: undefined reference to `tcp_sock_accept_queue_empty'
+collect2: error: ld returned 1 exit status
+Makefile:23: recipe for target 'tcp_stack' failed
+make: *** [tcp_stack] Error 1

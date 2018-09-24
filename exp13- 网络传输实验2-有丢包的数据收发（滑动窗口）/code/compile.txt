@@ -1,0 +1,150 @@
+wang@ubuntu:~/networking/exp-13_tcp3$ make
+gcc -c -g -Wall -Iinclude -gdwarf-2 -g3 tcp_timer.c -o tcp_timer.o
+gcc  arp.o arpcache.o icmp.o ip.o main.o packet.o rtable.o rtable_internal.o tcp.o tcp_apps.o tcp_in.o tcp_out.o tcp_sock.o tcp_timer.o -o tcp_stack -lpthread 
+tcp.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+tcp_apps.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp_apps.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp_apps.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp_apps.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp_apps.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp_apps.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp_apps.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp_apps.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+tcp_in.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp_in.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp_in.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp_in.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp_in.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp_in.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp_in.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp_in.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+tcp_out.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp_out.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp_out.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp_out.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp_out.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp_out.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp_out.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp_out.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+tcp_sock.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp_sock.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp_sock.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp_sock.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp_sock.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp_sock.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp_sock.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp_sock.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+tcp_timer.o: In function `new_tcp_buf_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: multiple definition of `new_tcp_buf_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:165: first defined here
+tcp_timer.o: In function `init_tcp_trans_buf':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: multiple definition of `init_tcp_trans_buf'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:175: first defined here
+tcp_timer.o: In function `buf_remove_and_free_all_block':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: multiple definition of `buf_remove_and_free_all_block'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:183: first defined here
+tcp_timer.o: In function `buf_retrans_first':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: multiple definition of `buf_retrans_first'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:196: first defined here
+tcp_timer.o: In function `buf_append_packet':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: multiple definition of `buf_append_packet'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:204: first defined here
+tcp_timer.o: In function `buf_ack':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: multiple definition of `buf_ack'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:219: first defined here
+tcp_timer.o: In function `ofo_packet_enqueue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: multiple definition of `ofo_packet_enqueue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:253: first defined here
+tcp_timer.o: In function `ofo_packet_dequeue':
+/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: multiple definition of `ofo_packet_dequeue'
+main.o:/home/wang/networking/exp-13_tcp3/include/tcp_sock.h:280: first defined here
+collect2: error: ld returned 1 exit status
+Makefile:23: recipe for target 'tcp_stack' failed
+make: *** [tcp_stack] Error 1
